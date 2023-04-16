@@ -1,143 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="script" href="cgpa.js"/>
-    <title>CGPA</title>
-    <h1>GPA CALCULATOR</h1>
-    <script language="javaScript" type="text/javascript">
-    function getmark(ch){
-    if (ch == 'O')
-        return 10
-    else if (ch == 'A+')
-        return 9
-    else if (ch == 'A')
-        return 8
-    else if (ch == 'B+')
-        return 7
-    else if (ch == 'B')
-        return 6
-    else if (ch == 'C')
-        return 5
-    else
-        return 0
-    }
-    function gpa(){
-        var ds_obj= document.getElementById('ds');
-        var dbms_obj= document.getElementById('dbms');
-        var ca_obj= document.getElementById('ca');
-        var oops_obj= document.getElementById('oops');
-        var maths_obj= document.getElementById('maths');
-        var dslb_obj= document.getElementById('dslb');
-        var dbms_lb_obj= document.getElementById('dbms_lb');
-        
-        var ds=  ds_obj.options[ds_obj.selectedIndex].text;
-        var dbms= dbms_obj.options[dbms_obj.selectedIndex].text;
-        var ca= ca_obj.options[ca_obj.selectedIndex].text;
-        var oops= oops_obj.options[oops_obj.selectedIndex].text;
-        var maths= maths_obj.options[maths_obj.selectedIndex].text;
-        var dslb= dslb_obj.options[dslb_obj.selectedIndex].text;
-        var dbms_lb= dbms_lb_obj.options[dbms_lb_obj.selectedIndex].text;
+	<meta charset="UTF-8">
+	<link rel="script" href="cgpa.js" />
+	<title>CGPA</title>
+	<h1>GPA CALCULATOR</h1>
+	<script language="javaScript" type="text/javascript">
+		function getmark(ch) {
+			if (ch == 'O')
+				return 10
+			else if (ch == 'A+')
+				return 9
+			else if (ch == 'A')
+				return 8
+			else if (ch == 'B+')
+				return 7
+			else if (ch == 'B')
+				return 6
+			else if (ch == 'C')
+				return 5
+			else
+				return 0
+		}
+		function gpa() {
+			var ds_obj = document.getElementById('ds');
+			var dbms_obj = document.getElementById('dbms');
+			var ca_obj = document.getElementById('ca');
+			var oops_obj = document.getElementById('oops');
+			var maths_obj = document.getElementById('maths');
+			var dslb_obj = document.getElementById('dslb');
+			var dbms_lb_obj = document.getElementById('dbms_lb');
 
-        const tot_cdt = 19;
+			var ds = ds_obj.options[ds_obj.selectedIndex].text;
+			var dbms = dbms_obj.options[dbms_obj.selectedIndex].text;
+			var ca = ca_obj.options[ca_obj.selectedIndex].text;
+			var oops = oops_obj.options[oops_obj.selectedIndex].text;
+			var maths = maths_obj.options[maths_obj.selectedIndex].text;
+			var dslb = dslb_obj.options[dslb_obj.selectedIndex].text;
+			var dbms_lb = dbms_lb_obj.options[dbms_lb_obj.selectedIndex].text;
 
-        const a = getmark(ds);
-        const b = getmark(dbms);
-        const c = getmark(ca);
-        const d = getmark(oops);
-        const e = getmark(maths);
-        const f = getmark(dslb);
-        const g = getmark(dbms_lb);
+			const tot_cdt = 19;
 
-        const result = ((3 * (a + b + c + d + e ) ) + (2 * ( f + g )))/tot_cdt;
-        document.getElementById("demo").innerHTML=result;
-      }
+			const a = getmark(ds);
+			const b = getmark(dbms);
+			const c = getmark(ca);
+			const d = getmark(oops);
+			const e = getmark(maths);
+			const f = getmark(dslb);
+			const g = getmark(dbms_lb);
 
-    </script>
+			const result = ((3 * (a + b + c + d + e)) + (2 * (f + g))) / tot_cdt;
+			document.getElementById("demo").innerHTML = result;
+		}
+
+	</script>
 </head>
+
 <body>
-    <section class="allgrade">
-    <label>JCS1301(DS)</label>
-    <div id="ds">
-    <select name="grade1">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JCS1302(DBMS)</label>
-    <div id="dbms">
-    <select name="grade2">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JCS1303(CA)</label>
-    <div id="ca">
-    <select name="grade3">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JCS1321(OOPS)</label>
-    <div id="oops">
-    <select name="grade4">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JMA1303(MATHS)</label>
-    <div id="maths">
-    <select name="grade5">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JCS1311(DS LAB)</label>
-    <div id="dslb">
-    <select name="grade6">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <label>JCS1312(DBMS LAB)</label>
-    <div id="dbsmslb">
-    <select name="grade7">
-        <option>O</option>
-        <option>A+</option>
-        <option>A</option>
-        <option>B+</option>
-        <option>B</option>
-        <option>C</option>
-    </select>
-    </div>
-    <div>
-        <input type="button" value="calculate" onclick="gpa()"/>
-    </div>
-    <p id="demo">THE GPA :</p>
-    </section>    
+	<section class="allgrade">
+		<label>JCS1301(DS)</label>
+		<div id="ds">
+			<select name="grade1">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JCS1302(DBMS)</label>
+		<div id="dbms">
+			<select name="grade2">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JCS1303(CA)</label>
+		<div id="ca">
+			<select name="grade3">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JCS1321(OOPS)</label>
+		<div id="oops">
+			<select name="grade4">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JMA1303(MATHS)</label>
+		<div id="maths">
+			<select name="grade5">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JCS1311(DS LAB)</label>
+		<div id="dslb">
+			<select name="grade6">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<label>JCS1312(DBMS LAB)</label>
+		<div id="dbsmslb">
+			<select name="grade7">
+				<option>O</option>
+				<option>A+</option>
+				<option>A</option>
+				<option>B+</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<div>
+			<input type="button" value="calculate" onclick="gpa()" />
+		</div>
+		<p id="demo">THE GPA :</p>
+	</section>
 </body>
+
 </html>

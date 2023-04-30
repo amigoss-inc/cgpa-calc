@@ -13,10 +13,10 @@
 <body>
 	<h1 class="heading">GPA CALCULATOR</h1>
 	<section class="choose">
-		<label>JCS1301(DS)</label>
-		<div id="ds_cont">
-			<select id="ds" name="grade1">
-				<option  value="O" >O</option>
+		<div class="container" id="ds_cont">
+			<label>JCS1301(DS)</label>
+			<select id="ds" class="dropdown" name="grade1">
+				<option  value="O" selected>O</option>
 				<option  value="A+">A+</option>
 				<option  value="A" >A</option>
 				<option  value="B+">B+</option>
@@ -24,10 +24,10 @@
 				<option  value="C" >C</option>
 			</select>
 		</div>
-		<label>JCS1302(DBMS)</label>
-		<div id="dbms_cont">
-			<select id="dbms" name="grade2">
-				<option value="O" >O</option>
+		<div id="dbms_cont" class="container" >
+			<label>JCS1302(DBMS)</label>
+			<select id="dbms" class="dropdown" name="grade2">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A" >A</option>
 				<option value="B+">B+</option>
@@ -35,10 +35,10 @@
 				<option value="C" >C</option>
 			</select>
 		</div>
-		<label>JCS1303(CA)</label>
-		<div id="ca_cont">
-			<select id="ca" name="grade3">
-				<option value="O">O</option>
+		<div id="ca_cont" class="container">
+			<label>JCS1303(CA)</label>
+			<select id="ca" class="dropdown" name="grade3">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A">A</option>
 				<option value="B+">B+</option>
@@ -46,10 +46,10 @@
 				<option value="C">C</option>
 			</select>
 		</div>
-		<label>JCS1321(OOPS)</label>
-		<div id="oops_cont">
-			<select id="oops" name="grade4">
-				<option value="O" >O</option>
+		<div id="oops_cont" class="container">
+			<label>JCS1321(OOPS)</label>
+			<select id="oops" class="dropdown" name="grade4">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A" >A</option>
 				<option value="B+">B+</option>
@@ -57,10 +57,10 @@
 				<option value="C" >C</option>
 			</select>
 		</div>
-		<label>JMA1303(MATHS)</label>
-		<div id="maths_cont">
-			<select id="maths" name="grade5">
-				<option value="O" >O</option>
+		<div class="container" id="maths_cont">
+			<label>JMA1303(MATHS)</label>
+			<select id="maths" class="dropdown" name="grade5">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A" >A</option>
 				<option value="B+">B+</option>
@@ -68,10 +68,10 @@
 				<option value="C" >C</option>
 			</select>
 		</div>
-		<label>JCS1311(DS LAB)</label>
-		<div id="dslb_cont">
-			<select id="ds_lab" name="grade6">
-				<option value="O" >O</option>
+		<div id="dslab_cont" class="container">
+			<label>JCS1311(DS LAB)</label>
+			<select id="ds_lab" class="dropdown" name="grade6">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A" >A</option>
 				<option value="B+">B+</option>
@@ -79,10 +79,10 @@
 				<option value="C" >C</option>
 			</select>
 		</div>
-		<label>JCS1312(DBMS LAB)</label>
-		<div id="dbsmslb">
-			<select id="dbms_lab" name="grade7">
-				<option value="O" >O</option>
+		<div id="dbmslab_cont" class="container">
+			<label>JCS1312(DBMS LAB)</label>
+			<select id="dbms_lab" class="dropdown" name="grade7">
+				<option value="O" selected>O</option>
 				<option value="A+">A+</option>
 				<option value="A" >A</option>
 				<option value="B+">B+</option>
@@ -90,11 +90,13 @@
 				<option value="C" >C</option>
 			</select>
 		</div>
-		<div>
-			<input type="button" value="calculate" onclick="gpa()" />
+		<div class="button">
+			<button class="actual" onclick="gpa()">
+				Calculate
+			</button>
 		</div>
-		<p id="demo">THE GPA :</p>
 	</section>
+	<p id="result">THE GPA :</p>
 </body>
 
 </html>

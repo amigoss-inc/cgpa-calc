@@ -42,6 +42,6 @@ function gpa() {
 	const g = getmark(dbms_lb);
 
 	const result = ((3 * (a + b + c + d + e)) + (2 * (f + g))) / tot_cdt;
-	document.getElementById("demo").innerHTML = result.toPrecision(4);
+	document.getElementById("result").innerHTML = "GPA: " + result.toPrecision(4);
 }
 

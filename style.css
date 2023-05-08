@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 body {
 	background-color: #2e3440;
 }
 
 .heading {
-	font-family: "Iosevka", sans-serif;
+	font-family: "Bebas Neue";
 	text-align: center;
 	color: #eceff4
 }
@@ -13,7 +15,7 @@ body {
 	background-color: #3b4252;
 	padding: 15px;
 	margin: 3rem;
-	font-family: sans-serif;
+	font-family: "Quicksand";
 	font-weight: 400;
 }
 
@@ -23,7 +25,7 @@ body {
 	justify-content: center;
 	grid-row-gap: 5px;
 	grid-column-gap: 5px;
-	font-family: sans-serif;
+	font-family: "Quicksand";
 	color: #D8DEE9;
 }
 
@@ -33,7 +35,7 @@ body {
 }
 
 #result {
-	font-family: sans-serif;
+	font-family: "Quicksand";
 	font-weight: 500;
 	color: #81a1c1;
 	text-align: center;

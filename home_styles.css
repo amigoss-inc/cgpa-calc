@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 html {
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom right,#ff00d9,#ff00bb,#ffffff);
+    background-image: linear-gradient(to bottom right, #5e81ac, #81a1c1, #88c0d0, #8fbcbb);
     background-size: cover;
     height: 100%;
 }
+
+.heading {
+	color: #2e3440;
+	text-align: center;
+	font-family: Bebas Neue;
+	font-size: 3rem;
+}
+
+.head-label {
+	text-align: center;
+	justify-content: center;
+}
+
+#outer-select-calc {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
 #select-calc{
     margin: auto;
     
@@ -17,4 +38,7 @@ html {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.412);
     backdrop-filter:blur(10px);
+
+	font-family: Quicksand;
+	color: #2e3440;
 }
